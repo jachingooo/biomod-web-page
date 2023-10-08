@@ -1,0 +1,121 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.list_dt{
+    background: #333;
+    color: white;
+    width: 200px;
+    padding:3px;/*用于导航栏位置*/
+    height: 45px;
+    line-height: 40px;
+    cursor: pointer;/*显示光标为小手*/
+    overflow: hidden;/*溢出内容被隐藏*/
+    text-overflow: ellipsis;/*溢出文本被剪切*/
+    position: relative;/*文本不会换行，直到遇到br*/
+    border-bottom: 1px solid #464646;
+     font-size: 16px;
+     text-align:center;
+
+}
+.list_dt:hover{
+    background: #222;/*上级项目悬浮的颜色 深黑色*/
+}
+.list_dt:hover ._after{
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background:rgb(236, 105, 82);
+}
+#open{
+    background: #222;
+}
+#open ._after{
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(236, 105, 82);
+}
+
+.list_dt_icon{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/background/off.png") no-repeat;
+}
+#open .list_dt_icon{
+    background: url("../images/background/open.png") no-repeat;/*展开关闭的箭头*/
+}
+
+.list_dd{
+    display: none;
+}
+
+.list_dd ul{
+	margin-bottom:0px !important;
+}
+.list_li{
+	 font-size: 15px;
+    background: #4e4e4e;/*下级项目的颜色*/
+    list-style-type: none;
+    color: white;
+    width: 200px;
+    padding: 0 8px 0 10px;/*子导航栏位置调试*/
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-bottom: 1px solid #6b6b6b;
+    text-align:center;
+}
+.list_li:hover{
+    background: rgb(236, 105, 82);/*下级项目悬浮颜色*/
+}
+#navall{
+    margin:30px;
+    position:fixed;
+	top :180px;
+	left:-10px;
+	z-index:100;
+}
+
+#designnav{
+	padding-left:0px;
+	padding-right:0px;
+}
+
+   div.floatCtro a{ display:inline-block; 
+   	display:none; 
+   	width:60px;
+   	 height:60px;
+   	 margin:10px 0 0 0; 
+   	 background:#fff;
+   	  color:#000;
+   	    vertical-align:middle; 
+   	    cursor:pointer;}
+  div.floatCtro a span{ 
+  	display:block; 
+  	width:28px;
+  	 height:44px; 
+  	line-height:22px;  
+  	font-family:'Roboto'; 
+  	font-size:14px; line-height:22px; 
+  	text-align:center; margin:8px 16px; _
+  	margin:-10px 0 0 16px;}
+  div.floatCtro a:hover{ 
+  	background:white; 
+  	color:#fff; 
+  	zoom:1;}
+ div.floatCtro li.cur{ 
+ 	background:rgb(236, 105, 82); 
+ 	color:#fff;}
+

@@ -1,0 +1,21 @@
+.header{
+	background: rgb(72, 72, 74);
+	font-size:50px;
+}
+
+.features-page{
+	background-color: rgb(245,245,245);
+}
+
+.fa-star{
+	color:rgb(236, 105, 82);
+}
+
+/*experiment*/
+.tabex{
+  text-align: center;
+}
+
+#xingxing{
+	margin-left: 0px;
+}
