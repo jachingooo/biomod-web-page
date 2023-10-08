@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>TeamSeason 2018</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <!---<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>--->
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head> 
+
+<body class="home-page">  
+	  <section class="steps section">
+    <div id="project">
+    	<h2><strong>The exploration process of our coding rules</strong></h2>
+    	<p>Compared with using computer to code Chinese characters, using DNA needs to solve the following problems:</p>
+    	<ol style="padding-left:30px;padding-right:30px;">
+    		<li>DNA sequence corresponds to Chinese characters. The existing methods that input Chinese characters into computer basically cannot retrieve specific Chinese characters after inputting specific code.</li>
+    		<li>DNA sequences need to use as few bases as possible to represent Chinese characters to save costs. Computer code can use sufficient Chinese information to identify specific Chinese characters. While the DNA encoding of Chinese characters limits the amount of information in Chinese characters, and need to use as little information as possible to determine Chinese characters.</li>
+    		<li>The selection of DNA sequence. Each base can only have four choices: A, T, C and G. However, using computer code, there can be 26 keys to code Chinese characters.</li>
+    		<li>The selection of DNA sequence. Each base can only have four choices: A, T, C and G. However, using computer code, there can be 26 keys to code Chinese characters.</li>
+    		<li>DNA sequences need to consider GC content and secondary structure, which greatly limits the selection of DNA sequences. All DNA sequences are not equal, while all keys on the keyboard are equal.</li>
+    		<li>Scalability of the coding scheme. There are a lot of Chinese characters. In a short time, we cannot encode all Chinese characters, but to store more Chinese characters in the future, the coding scheme needs to be expanded.</li>
+    	</0l>
+
+    	<p>It is the existence of these problems that makes our coding of Chinese characters long and tortuous.</p>
+
+    	<h3><strong>Plan 1</strong></h3>
+    		<p>Convert of Gb code into nucleotide sequences.</p>
+    		<p><strong>NO!</strong> Such code merely gives different Chinese characters different binary Numbers, meaningless, losts the vitality of Chinese characters.</p>
+
+    	<h3><strong>Plan 2</strong></h3>
+    		<p>Take the Chinese character as a picture and make it into a grid. Record whether there are Chinese character strokes in different positions in each square.</p>
+    		<p><strong>NO!</strong> The writing of Chinese characters is complex and requires too many nucleotide sequences to record information.</p>
+
+    	<h3><strong>Plan 3</strong></h3>
+    		<p>Build a huge space coordinate system, where each character takes up a position and records the position.</p>
+    		<p><strong>NO!</strong> The number of Chinese characters is too large. Nucleotide sequences can be too long when there is a lot of information required.</p>
+
+    	<h3><strong>Plan 4</strong></h3>
+    		<p>Use phonetic coding. The pronunciation of each Chinese character is simple, and the pronunciation can be determined by the specific initials + finals. The initials and finals can be respectively corresponded to specific nucleotide sequences, and the two can combine to obtain the nucleotide sequences of Chinese characters.</p>
+    		<p><strong>NO!</strong> There may be several or hundreds of Chinese characters with the same pronunciation, and it is hard to determine how many nucleotides are needed for different characters with the same pronunciation. There are many kinds of initials and finals, which also make the corresponding sequence of Chinese characters longer, resulting in the waste of bases.</p>
+
+    	<h3><strong>Plan 5</strong></h3>
+    		<p>Use Chinese pronunciation + structure. The initials of Chinese characters and part of the writing features of Chinese characters are used to distinguish different Chinese characters.</p>
+    		<p><strong>NO!</strong>After calculation, 8 nucleotides were not enough to distinguish the pronunciation and writing features of Chinese characters.</p>
+
+    	<h3><strong>Plan 6</strong></h3>
+    		<p>Use the order of the characters. Different Chinese characters can be sorted according to the complexity of writing, which can correspond to nucleotide sequences.</p>
+    		<p><strong>NO!</strong>This coding rule is not conducive to the expansion of Chinese characters. When new Chinese characters need to be stored, the order of all Chinese characters will change, and the nucleotide sequence will also change.</p>
+
+    	<p>After a series of attempts, we thought of using Wubi input method to encode Chinese characters.</p>
+    	<p>Wubi font is coded according to the strokes and font characteristics of Chinese characters, is a typical form shape code input method. Wubi input method puts forward the concept of "etymon". All Chinese characters can be represented by one to four etymons. "Wubi input method" distributes Chinese character etymons on the keyboard (as shown in the figure below). Each key is called a Wubi code, and Chinese characters can be represented by up to 4-bit Wubi code.</p>
+    	<p align="center"><img src="assets/images/design/wubi.png" width="600"></p>
+           <p class="figure" style="text-align:center;"><strong>Figure 1. </strong>Wubi input method keyboard</p>
+
+       <h3><strong>Plan 7</strong></h3>
+    		<p>Redistribute the etymons, randomly combine the original 25 types of Wubi codes into 12 groups, and used two nucleotides to represent 12 groups of Wubi codes respectively. The characters’ 4-bit Wubi code is converted into an 8-bit nucleotide sequence.</p>
+    		<p><strong>NO!</strong>After combining the Wubi code, the two Chinese characters that have only one Wubi code is different have the same nucleotide sequence. Multiple Chinese characters correspond to the same nucleotide sequences, and the GC content of some corresponding DNA sequences is too high.</p>
+
+    	<h3><strong>Plan 8</strong></h3>
+    		<p>Count the use frequency of 25 typesof Wubi codes, and combine them into 12 groups according to the use frequency.</p>
+    		<p><strong>NO!</strong>There are still many Chinese characters corresponding to the same nucleotide sequence. And the GC content of some corresponding DNA sequences is also too high.</p>
+
+    	<h3><strong>Plan 9</strong></h3>
+    		<p>Redistribute the etymons, randomly combine the original 25 types of Wubi codes into 10 groups, and use two nucleotides to represent 10 groups of Wubi codes respectively (GC,CG did not have Wubi code corresponding to them). The characters' 4-bit Wubi code is converted into an 8-bit nucleotide sequence. If the two characters correspond to the same nucleotide sequence, GC is used to replace two nucleotides in the sequence.</p>
+    		<p><strong>NO!</strong>This did not greatly improve the problem of multiple Chinese characters corresponding to the same nucleotide sequences, and the problem of the too high GC content.</p>
+
+    	<h3><strong>Plan 10</strong></h3>
+    		<p>Count the frequency of each Wubi code of Chinese characters, and design the grouping method for each Wubi code of Chinese characters.</p>
+    		<p><strong>NO!</strong>The problems above remain unresolved.</p>
+
+    	<h3><strong>Plan 11</strong></h3>
+    		<p>Take the 2-3 bits of Chinese Wubi code as a unit, and count the frequency of its different combinations. Take 2-3 bits corresponding to 4 nucleotide sequences, then recode Chinese characters.</p>
+    		<p><strong>NO!</strong>The problems remain.</p>
+
+    	<h3><strong>Plan 12</strong></h3>
+    		<p>The plan you can see in <a href="design.html">our wiki.</a></p>
+    		
+
+
+
+    </div>
+</section>
+
+
+    <!-- ******FOOTER****** --> 
+ <footer class="footer">
+         <P><strong>@2018TeamSeason</strong></P>
+            <p><strong>Email: biomod2019@163.com</strong></p>
+            <p><strong><a  href="https://drnatech.wixsite.com/mysite"> LAB </a>&nbsp;&nbsp;&nbsp;<a href="http://biomod.net/">BIOMOD</a></strong></p>
+    </footer><!--//footer-->
+
+     <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>     
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <!-- Vimeo video API -->
+    <script src="assets/js/froogaloop2.min.js"></script>
+    <script type="text/javascript" src="assets/js/vimeo.js"></script> 
+    <script src="assets/js/loading.js"></script>
+    </body>
+</html> 
+

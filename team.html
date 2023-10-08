@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>TeamSeason 2018</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <!---<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>--->
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            var images = document.getElementsByTagName("img");
+            for(var i = 0; i < images.length; i++)
+                {
+                    images[i].onmouseover = showAnswer;
+                    images[i].onmouseout = reblur;
+                }
+        }
+
+        function showAnswer(eventObj)
+        {
+            var image = eventObj.target;
+            var name = image.id;
+            name = "assets/images/team/" +name + ".jpg";
+            image.src = name;
+        }
+
+        function reblur(eventObj)
+        {
+            var image = eventObj.target;
+            var name = image.id;
+            name = "assets/images/team/" +name + "blur.jpg";
+            image.src = name;
+        }
+    </script>
+</head> 
+
+<body class="blog-page">
+    <div class="wrapper">
+        <!-- ******HEADER******轮播的图片在CSS中 --> 
+        <header class="header header-blog">  
+            <div class="container">       
+                
+                <nav class="main-nav navbar-right" role="navigation">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button><!--//nav-toggle-->
+                    </div><!--//navbar-header-->
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item nav-item-main-site last"><a href="index.html"><i class="fa fa-home"></i> Back to home</a></li>
+                        </ul><!--//nav-->
+                        
+                        <div class="searchbox-container"> </div><!--//searchbox-container-->                                                
+                        
+                    </div><!--//navabr-collapse-->
+                </nav><!--//main-nav-->         
+            </div><!--//container-->
+        </header><!--//header-->         
+        
+        <section class="featured-blog-posts section">       
+       
+            <div class="flexslider blog-slider">
+                <ul class="slides">
+                    <li class="slide slide-1">
+                       <!--  <div class="flex-caption container"> -->
+                            <!-- <h3 class="title"><a href="#">Ideas are easy, execution is hard</a></h3>
+                            <div class="meta">16th Oct, 2014</div>
+</div><!--//flex-caption--> 
+                    </li>
+                    <li class="slide slide-2">
+                        <!-- <div class="flex-caption container">
+                            <h3 class="title"><a href="#">Done is better than perfect</a></h3>
+                            <div class="meta">23rd Sep, 2014</div>
+                            <a class="more-link" href="blog-single.html">Read more &rarr;</a>
+                        </div><!--//flex-caption--> -->
+                    </li>
+                   <li class="slide slide-3">
+                       <!--<div class="flex-caption container">
+                           <h3 class="title"><a href="#">The value of an idea lies in the using of it</a></h3>
+                           <div class="meta">18th Aug, 2014</div>
+                           <a class="more-link" href="blog-single.html">Read more &rarr;</a>
+                       </div>//flex-caption-->
+                   </li> 
+                    <!--<li class="slide slide-4">-->
+                       <!--  <div class="flex-caption container">
+                            <h3 class="title"><a href="#">Good design is good business</a></h3>
+                            <div class="meta">5th Aug, 2014</div>
+                            <a class="more-link" href="blog-single.html">Read more &rarr;</a>
+                        </div> --><!--//flex-caption-->
+                   <!-- </li>-->
+                </ul><!--//slides-->
+            </div><!--//flexslider-->
+                    
+        </section><!--//featured-blog-posts-->
+        
+        <!-- ******BLOG LIST******队员介绍开始 --> 
+        <div class="blog container">
+            <div class="row">
+                <div id="blog-mansonry" class="blog-list">
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="zero" src="assets/images/team/zeroblur.jpg" alt="" /><!--alt 属性是一个必需的属性，它规定在图像无法显示时的替代文本-->                          
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Liang Zhuofeng</h3>
+                                <div class="post-entry">
+                                    <p>Experimental group <br> The captain of 2023 SeaSon<br><br>
+A junior in OUC ,majoring in pharmacy<br><br>
+ENFP 60%BLINK&40%NEVERLAND <br>
+A huge Jisoo Stan<br><br>
+“I do what i want with who i like~”<br>
+
+</p>
+                                    
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="one" src="assets/images/team/oneblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Sun Jiayi</h3>
+                                <div class="post-entry">
+                                    <p>
+A senior at College of Marine life sciences, Ocean University of China, I love playing volleyball and badminto, great ways for me to relax and enjoy life.
+
+</p>
+                                    
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="two" src="assets/images/team/twoblur.jpg" alt=""  />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Lu Zhennan</h3>
+                                <div class="post-entry">
+                                    <p>
+Responsible for biological experiments, the design of DNA sequence and organizing weekly discussion and report. Hoping to contribute to the development of science and technology, I invest a lot of time in learning biological experimental techniques.
+</p>
+                                   
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="three" src="assets/images/team/threeblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Jiacheng Lin</h3>                                
+                                <div class="post-entry">
+                                	<p>Full-stack Developer<br><br>
+                                                you can just call me kyle<br><br>
+                                	"the most charming one is charm itself."</p>
+                                   
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="four" src="assets/images/team/fourblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Zhang Yuzhe</h3>
+                                <div class="post-entry">
+                                <p>gender: male<br><br>
+hobbies:playing video games, table tennis, listening to rock music<br><br>
+favorite video game:Don't Starve Together<br><br>
+favorite rock band:Måneskin
+</p>
+
+                               
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="five" src="assets/images/team/fiveblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Wang Linlin</h3>
+                                <div class="post-entry">
+                                	<p>I am an undergraduate student of Ocean University of China, majoring in food science and engineering. I am very lucky to participate in this competition. In daily life I like to write, photograph, record the life is the trace of my existence.</p>
+
+                                   
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="six" src="assets/images/team/sixblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Fang Jiacheng</h3>
+                                <div class="post-entry">
+                                	<p>𝚜𝚑𝚎/𝚑𝚎𝚛/𝚑𝚎𝚛𝚜<br><br>
+𝙸𝙽𝚃𝙿<br><br>
+#𝐰𝐞𝐛 𝐝𝐞𝐬𝐢𝐠𝐧𝐞𝐫 #𝐯𝐢𝐝𝐞𝐨 𝐦𝐚𝐤𝐞𝐫 # 𝐜𝐮𝐥𝐭 𝐦𝐨𝐯𝐢𝐞𝐬 #𝐬𝐢𝐠𝐦𝐚 𝐟𝐞𝐦𝐚𝐥𝐞</p>
+                                    
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="seven" src="assets/images/team/sevenblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">空位子</h3>
+                                <div class="post-entry">
+                                	<p>描述</p>
+
+                                </div>
+                             </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+
+                     <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="eight" src="assets/images/team/eightblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">Gu Yaojia</h3>
+                                <div class="post-entry">
+                                	<p>I am a senior student majoring in aquaculture science in Ocean University of China. I mainly participating in wet lab. I’ve been happy to participate in the competition and work with team members. I like listening to music and watching musicals.</p>
+                                   
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+
+                     <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="nine" src="assets/images/team/nineblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">空位</h3>
+                                <div class="post-entry">
+                                	<p>描述</p>
+                                   
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+
+                     <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <img class="img-responsive" id="ten" src="assets/images/team/tenblur.jpg" alt="" />
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title">空位</h3>
+                                <div class="post-entry">
+                                    <p>描述</p>
+                                   
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                </div><!--//blog-list-->  
+            </div><!--//row-->
+            <div class="pagination-container text-center"> <!--//pagination-->
+            </div><!--//pagination-container-->
+        </div><!--//blog-->        
+    </div><!--//wrapper-->
+    
+    <!-- ******FOOTER****** --> 
+ <footer class="footer">
+         <P><strong>@名字</strong></P>
+            <p><strong>Email: 邮箱</strong></p>
+            <p><strong><a  href="https://drnatech.wixsite.com/mysite"> LAB </a>&nbsp;&nbsp;&nbsp;<a href="http://biomod.net/">BIOMOD</a></strong></p>
+    </footer><!--//footer-->
+    
+        
+    
+    
+
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script> 
+            
+    <!-- blog page specific js starts --> 
+    <script type="text/javascript" src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/masonry.pkgd.min.js"></script> 
+    <script type="text/javascript" src="assets/js/blog.js"></script>
+    <!-- blog page specific js ends -->   
+     
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="assets/js/loading.js"></script>
+            
+</body>
+</html> 
+
+
