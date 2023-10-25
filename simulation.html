@@ -61,43 +61,67 @@
     
     <!-- ******Video Section****** -->    <!--//feature-video-->
     <!-- ******Steps Section****** --> 
-    <section>
+   <section>
         <div>
             <p style="font-size: 55px;margin-top: 100px;text-align: center;"><strong>Simulation</strong></p>
         </div>
+	    
         <div style="margin-left: 21%;margin-right: 17%;margin-bottom: 10%">
-        <p style="padding-bottom:25px;">Welcome to our world! Now you will experience the complete storage process in which we divide it into 3 steps.</p>
-        
+        <p style="padding-bottom:25px;">How to get dumbbells that can hybridize with each other? We have designed a software to help us achieve the process.</p>
+           <p align="center" ><img src="assets/images/design/sim1.png" width="500px"></p>
+         <p class="figure" style="text-align:center;"><strong>Fig 1. </strong> Software designed by Team SeaSon</p>
+		
         <ul class="list-unstyled">
-                <li><h2><strong>  Step one: Encoding</strong></h2></li>
-                <p> Entering Chinese characters in our software, you will obtain the corresponding DNA sequences.</p><br>
-                <p align="center"><img width="750" src="assets/images/simulation/1.png"></p>
-                 <p class="figure" ><strong>step 1. </strong>Encoding. What's inside the box on the red line is the Chinese characters to be stored, and what's inside the box under the red line is the DNA sequences needed to store these Chinese characters.</p>
-                <br>
-                <li><h2><strong>  Step two: Amplification</strong></h2></li>
-                <p>According to the sequence you have got, you can synthesize DNA and then do some experiments. During the experiments, the changes of DNA are shown in the animation below. Now you can preserve the DNA to store the information.</p>
-                <div>
-                <video src="https://model-1253795707.cos.ap-beijing-1.myqcloud.com/simulation_step_2.mp4" style="margin-left:145px; width:60%; height:300" muted autoplay loop></video>
-                 </div>
-                 <p style="text-align:center;" class="figure"><strong>step 2. </strong> Amplification</p>
-                 <br>
-                <li><h2></i><strong>  Step three: Decoding</strong></h2></li>
-                <p>  After using nanopore sequencing to read the DNA base sequences, we can get some base sequences. Our software will obtain the reverse complementary information of the sequence, select, sort, and screen the DNA fragment with the highest repetition rate. And then it can be translated into the original information through our software.</p>
-                <div><br>
-                <video src="https://model-1253795707.cos.ap-beijing-1.myqcloud.com/simulation_step_3_1.mp4" style="margin-left:145px; width:60%; height:300" muted autoplay loop></video>
-                 </div>
-                 <p style="text-align:center;" class="figure"><strong>step 3-1. </strong> Sequence</p>
+                <li><h2><strong>Step one: Generate DNA ring:</strong></h2></li>
+                <p> Enter the sequence length in the software to generate a random app or sequence.</p><br>
+                <p align="center"><img width="750" src="assets/images/design/sim2.png"></p>
+		<p align="center"><img width="750" src="assets/images/design/sim3.png"></p>
+                 <p class="figure" ><strong>Fig 2&3. </strong>Generating non app or app sequences</p>
+		<p>We can select sequences from them to form DNA rings. App sequences are more inclined to generate z-dna, while non app sequences are more inclined to generate b-dna.</p>
+                <be>
+
+			
+                <li><h2><strong>Step two: Generate DNA stem:</strong></h2></li>
+		<p align="center"><img width="750" src="assets/images/design/sim4.png"></p>
+		<p align="center"><img width="750" src="assets/images/design/sim5.png"></p>
+                 <p class="figure" ><strong>step 4&5. </strong>Generating 5’ and 3’ terminal DNA</p>
+                <p>Input the 5 'end DNA length to randomly generate a 5' end DNA sequence, and then input the 5 'end DNA sequence to obtain complementary 3' end sequences.</p>
                 
-
                  <br>
-                 <p align="center"><img width="750" src="assets/images/simulation/2.png"></p>
-                  <p class="figure" style="text-align:center;"><strong>step 3-2. </strong> All the steps for retrieve information, as shown in the red box.</p>
-                <br><br>
+                <li><h2></i><strong>Step three: Generate palindrome sequence:</strong></h2></li>
+			<p align="center"><img width="750" src="assets/images/design/sim6.png"></p>
+                 <p class="figure" ><strong>Fig 6. </strong>Generating palindrome sequence</p>
+                <p>The palindrome sequence enables two identical assembly components to form a dumbbell.</p>
+			<p align="center"><img width="750" src="assets/images/design/sim6.png"></p>
+                 <p class="figure" ><strong>Fig 6. </strong>Generating palindrome sequence</p>
 
+			<li><h2></i><strong>Step four: Assemble the sequence and predict the structure</strong></h2></li>
+			<p>Here, we have designed the second software, which inputs DNA sequences and can export simulated DNA structure diagrams to Word documents.</p>
+			<br>
+				<p>For example, if I input TGCATGTAAATTCCGGATAGCGTACACATATCCAATCGAGCCATGTACGTACACTACATGCACGCG</p>
                  
-                 <p align="center"><img width="750" src="assets/images/simulation/3.png"></p>
-                  <p class="figure" ><strong>step 3-3. </strong>Decoding. What's inside the box on the red line is the DNA sequence, and what's inside the box under the red line is the Chinese characters we stored.</p>
-                <br>
+			<p align="center"><img width="750" src="assets/images/design/sim7.png"></p>
+                 <p class="figure" ><strong>Fig 7. </strong>Software for generating simulation diagrams using input sequences</p>
+				<p>I can export the following simulation diagram：</p>
+			<p align="center"><img width="750" src="assets/images/design/sim8.png"></p>
+                 <p class="figure" ><strong>Fig 8. </strong>Simulation diagram generated by input sequence</p>
+			<p>Now you have one of the assembly components and two of them can form a dumbbell.</p>
+			<p align="center"><img width="750" src="assets/images/design/sim9.png"></p>
+			<p align="center"><img width="750" src="assets/images/design/sim10.png"></p>
+                 <p class="figure" ><strong>Fig 9&10. </strong>Simulation diagram generated by input sequence</p>
+
+			<li><h2></i><strong>Step five：Generate complementary ring sequences (using 180 degree complementarity as an example)</strong></h2></li>
+			<p align="center"><img width="750" src="assets/images/design/sim11.png"></p>
+                 <p class="figure" ><strong>Fig 11. </strong>Input the sequence of the DNA loop to obtain a 180 degree complementary sequence</p>
+                <p>Repeat steps 2-4 to obtain dumbbell B that can crossbreed with dumbbell A at 180 degrees</p>
+			<p align="center"><img width="750" src="assets/images/design/sim12.png"></p>
+                 <p class="figure" ><strong>Fig 12. </strong>Input the sequence of the DNA loop to obtain a 180 degree complementary sequence</p>
+
+
+			
+			
+                
+                 
                 
         </ul>
         </div>
