@@ -135,10 +135,6 @@
       <td class="tabex" width="550" style="padding:9px; white-space:normal; word-break:break-all;text-align:left;" >GACAGAGTTGAGCCTGAGTGACTTATGAATGATAGGTTGATAGTGAATATGTGATGCAACTCTGTCCGCG</td>
     </tr>
    
-    <tr>
-      <td class="tabex">strand 3</td>
-      <td class="tabex" style="padding:9px; white-space:normal; word-break:break-all;text-align: center;">GAGTCCGTACTTATACACTACTCGGACTCACTGAATACTTACTATCCAACTATCACGTACGGACTCAGCT</td>
-    </tr>
    
   </tbody>
 </table>
@@ -153,52 +149,22 @@
          <p style="padding-left: 180px;"><img width=400px; src="assets/images/experiment/1.png"></p>
          <p class="figure" style="text-align:center;"><strong>Figure 1. </strong>这个图需要画图标注每个泳道是啥</p><br>
 
-          <p>Samples were analyzed on a 10% non-denaturing polyacrylamide gel electrophoresis gel under 300V, the denaturing polyacrylamide were run in 1×TBE at room temperature.</p>
+          <p>Samples were analyzed on a 10% non-denaturing polyacrylamide gel under 300V, the non-denaturing polyacrylamide were run in 1×TBE at room temperature.</p>
   
      <p>We can obtain a dumbbell structure for hybridization, with lanes 4 and 5 showing the formation of dumbbells, and lane 6 showing the results of dumbbell hybridization.</p></div>
 
      <div id="float02">
-     <li style="font-size: 25px; "><strong>Hybridization involving DNA loops containing nicks</strong></li><br>
-         <p style="padding-left: 180px;"><img width="400" src="assets/images/experiment/2.png"></p>
+     <li style="font-size: 25px; "><strong>Validate the formation of Z-DNA using ADAR1, thereby verifying successful hybridization</strong></li><br>
+         <p style="padding-left: 180px;"><img width="400" src="assets/images/design/exp2.png"></p>
 
-         <p class="figure" style="text-align:center;"><strong>Figure 2. </strong>图片说明缺失</p><br>
+         <p class="figure" style="text-align:center;"><strong>Figure 2. </strong>Validate the formation of Z-DNA using ADAR1, thereby verifying successful hybridization</p><br>
 
-         <p>Samples were analyzed by 3% agarose gel electrophoresis at 120V, and agarose gel electrophoresis at 1 × TBE operates at room temperature.</p>
+         <p>Samples were analyzed on a 10% non-denaturing polyacrylamide gel under 300V, the non-denaturing polyacrylamide were run in 1×TBE at room temperature.</p>
        
-       <p>When self connecting, adding a certain proportion of unphosphorylated DNA single strands can obtain dumbbells containing nicks. Since dumbbells containing nicks are easier to hybridize than ordinary dumbbells, adjusting the proportion of unphosphorylated DNA single strands can also change the success rate of hybridization, enabling serial hybridization of multiple dumbbells.</p>
+       <p>Lanes 2 and 3 are dumbbell A and dumbbell B, respectively. Lanes 4 and 6 are two types of hybrid dumbbells, and the concentration gradually increases when ADAR1 is added to the system. We can see that as the concentration of ADAR1 increases, the stripes become clearer. This is because ADAR1 binds to the hybrid structure, causing its movement speed in the runway to slow down.</p>
        <br>
 </div>
 
-<div id="float03">
-  <li style="font-size: 25px; "><strong>Analyse sequence results </strong></li><br>
-    <p>Through MinION sequencing and simple sequencing results data processing, we can get DNA sequences in a short time, which can be directly used to retrieve Chinese characters information.In the end, a total of 52 files containing sequence information were obtained in fasta format.</p>
-    <p>Step 1:</p>
-    <ul>
-        <li style="list-style-type: disc;margin-left:40px;">Use Nanopack software for preliminary data analysis.</li>
-        <li style="list-style-type: disc;margin-left:40px;">After NanoLyse processing, DNA_CS. fasta was taken as the reference gene.</li>
-        <li style="list-style-type: disc;margin-left:40px;">After NanoFilt treatment, the reads with a mass less than 1 and a length less than 1000 bp were removed.</li>
-        <li style="list-style-type: disc;margin-left:40px;">After NanoPlot treatment, the total number of sequences, the average length and the average quality of all sequences were obtained. As the figure 3 and figure 4 show:</li>
-    </ul><br>
-    <p style="margin-left:160px;"><img src="assets/images/experiment/3.png"></p>
-
-     <p class="figure" style="text-align:center;"><strong>Figure 3. </strong>Summary statistics of all sequences.</p><br><br>
-
-
-    <p style="margin-left:160px;"><img src="assets/images/experiment/4.png"></p>
-
-         <p class="figure" style="text-align:center;"><strong>Figure 4. </strong>Read lengths vs Average read quality plot.</p><br>
-
-    <p>Most of reading lengths is within 1000 while average read quality focus on 7-9, which consistent with statistical information.</p>
-     <p>Step 2:</p>
-    <div style="margin-left:50px;">
-    <ul>
-        <li style="list-style-type: disc;"> Use Canu software for data splicing.</li>
-        <li style="list-style-type: disc;"> The selected parameter is genomesize = 8 k and error Rate = 0.500.</li>
-        <li style="list-style-type: disc;">After data splicing, all useful sequence information are obtained.</li>
-        <li style="list-style-type: disc;">A total of 4 useful sequences were obtained. In one of the sequences, we found the sequence consistent with single strand DNA five times.</li><br>
-        </ul>
-    <br>
-</div>
 
 
 
@@ -383,10 +349,7 @@
       <td  class="tabex" style="padding-left: 20px;padding-right: 20px;">Strand 2</td>
       <td class="tabex" style="border-bottom: 1 solid rgb(245,245,245);padding-left: 20px;padding-right: 20px;">GACAGAGTTGAGCCTGAGTGACTTATGAAT<br>GATAGGTTGATAGTGAATATGTGATGCAACTCTGTCCGCG</td>
     </tr>
-	  <tr>
-      <td  class="tabex" style="padding-left: 20px;padding-right: 20px;">Strand 3</td>
-      <td class="tabex" style="border-bottom: 1 solid rgb(245,245,245);padding-left: 20px;padding-right: 20px;">GAGTCCGTACTTATACACTACTCGGACTCACTGAATACTTACTATCCAACTATCACGTACGGACTCAGCT</td>
-    </tr>
+	  
   </tbody>
 </table>
 </ul>
